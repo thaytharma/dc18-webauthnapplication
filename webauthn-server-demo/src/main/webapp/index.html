@@ -315,12 +315,12 @@ function authenticate(username = null, getRequest = getAuthenticateRequest) {
     statusStrings: {
       init: 'Initiating authentication ceremony with server...',
       authenticatorRequest: 'Asking authenticators to perform assertion...',
-      success: 'Authentication successful!',
+      success: 'Innlogging vellykket!',
     },
     executeRequest: executeAuthenticateRequest,
   }).then(data => {
     if (data.registrations) {
-      addMessage(`Authenticated as: ${data.registrations[0].username}`);
+      addMessage(`Logget inn som: ${data.registrations[0].username}`);
     }
     return data;
   }).catch((err) => {
@@ -418,11 +418,11 @@ window.onload = init;
 
     <div class="header-logo visible-desktop">
       <a href="https://www.yubico.com/" title="Yubico">
-        <img src="img/yubico-logo.png"/>
+        <img src="img/logo-difi.png"/>
       </a>
     </div>
 
-    <h1> Test your WebAuthn device </h1>
+    <h1> WebAuthn Test Application </h1>
 
     <form class="horizontal">
       <div class="row">
